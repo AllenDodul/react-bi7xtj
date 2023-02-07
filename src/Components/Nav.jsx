@@ -5,14 +5,14 @@ import {CartContext} from '../CartContext.js';
 
 const Nav = () =>{
   const {items} = useContext(CartContext);
-  
+
   return(
     <nav>
       <Link to='/'>
         <h1>Store</h1>
       </Link>
       <Link to='/cart'>
-        <p>Cart <span>0</span></p>
+        <p>Cart <span>{items.length}</span></p>
       </Link>
     </nav>
   ) 
